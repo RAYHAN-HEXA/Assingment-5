@@ -1,5 +1,5 @@
 let accountBalance = 1000000000; // Initial account balance
-let totalDonated = 0; // Track total donations
+let totalDonated =0; // Track total donations
 let donationCount = 0; // Track number of donations
 
 // Function to handle donations
