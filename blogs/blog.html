@@ -1,43 +1,100 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.0.0/dist/full.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 p-10">
-
-    <!-- Navbar -->
-    <nav class="navbar bg-base-100 shadow-lg sticky top-0 z-50 px-10 py-4">
-        <div class="flex-1">
-            <a href="index.html" class="btn btn-ghost normal-case text-xl">Home</a>
+<html lang="en" class="">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+          href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Blog</title>
+        <style>
+          h1{
+              color: black;
+          }
+          p{
+              color: black;
+          }
+          button{
+              color: black;
+          }
+              </style>
+      </head>
+<body>
+    <header class="">
+      <div class="nav-container bg-[#F9F7F3]">
+        <nav class="flex w-10/12 mx-auto py-6 justify-between items-center">
+          <a href="../index.html">
+            <button
+            class="py-2 px-10 rounded-[10px] bg-[#b4f461] text-black font-bold"
+            id="blog-home"
+          >
+            Home
+          </button>
+          </a>
+          <div class="name md:flex items-center  gap-3 ">
+            <div class="lg:w-[2vw] md:w-[4vw] w-[7vw] "><img src="../assets/logo.png" alt="" /></div>
+            <h1 class="font-bold md:text-xl  hidden md:block">Bangladesh Donation</h1>
+          </div>
+          <div class="balance flex items-center gap-1" >
+            <div class="">
+              <div class="lg:w-[2vw] md:w-[5vw] w-[10w]"><img src="../assets/coin.png" alt="" /></div>
+            </div>
+            <h1 class="text-lg font-semibold">15000</h1>
+          </div>
+        </nav>
+        <div class="btns flex justify-center gap-6 bg-white py-5">
+            <button id="donation" class="bg-[#b4f461] py-2 px-10 rounded-lg text-black font-bold">Donation</button>
+            <button id="history" class=" outline outline-gray-300 py-2 px-10 rounded-lg text-black font-bold">History</button>
         </div>
-    </nav>
+      </div>
+      </header>
 
-    <h1 class="text-3xl font-bold mb-6">Blog</h1>
+      <main class="bg-white ">
+        <div class="w-10/12 mx-auto py-10 space-y-3">
 
-    <div class="space-y-6">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold">1. What is the Document Object Model (DOM)?</h2>
-            <p>The DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programming languages to interact with the document structure.</p>
+            <div class="collapse collapse-plus bg-slate-100 py-2">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold text-black ">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                  <p class="font-semibold">The Document Object Model (DOM) is a programming interface for web documents, representing the structure as a tree of objects. It allows scripts to dynamically access and manipulate HTML or XML content.</p>
+                </div>
+              </div>
+
+              <div class="collapse collapse-plus bg-slate-100 py-2">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-bold text-black">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                  <p class="font-semibold">To select an element from the DOM, use JavaScript methods like getElementById, querySelector, or getElementsByClassName to target elements by ID, CSS selectors, or class names for manipulation.</p>
+                </div>
+              </div>
+              
+            <div class="collapse collapse-plus bg-slate-100 py-2">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title text-xl font-bold text-black ">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                  <p class="font-semibold">Event delegation is a technique in the DOM where a single event listener is added to a parent element to handle events from its children. It improves performance and simplifies dynamic content handling.</p>
+                </div>
+              </div>
+
+              <div class="collapse collapse-plus bg-slate-100 py-2">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title text-xl font-bold text-black">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                  <p class="font-semibold">To manipulate an element's attributes and styles in the DOM, use setAttribute() or getAttribute() for attributes, and modify the style property for CSS, like element.style.color = "red";.</p>
+                </div>
+              </div>
+
+
+              </div>
         </div>
+      </main>
 
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold">2. How do you select an element from the DOM?</h2>
-            <p>You can select elements using various methods such as <code>document.getElementById</code>, <code>document.querySelector</code>, and <code>document.getElementsByClassName</code>.</p>
-        </div>
+      <script src="../js/index.js"></script>
+      <script src="../js/blog.js"></script>
 
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold">3. What is event delegation and why is it useful?</h2>
-            <p>Event delegation is a technique where a single event listener is added to a parent element instead of individual child elements. This is useful for managing events efficiently, particularly for dynamically generated content.</p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-semibold">4. How do you manipulate an element's attributes and styles using the DOM?</h2>
-            <p>You can manipulate an element's attributes using methods such as <code>setAttribute</code> and <code>getAttribute</code>. To change an element's styles, modify its <code>style</code> property directly.</p>
-        </div>
-    </div>
 </body>
 </html>
